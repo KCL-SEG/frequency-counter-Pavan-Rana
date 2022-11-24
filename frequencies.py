@@ -4,9 +4,11 @@
 def frequencies(items):
     frequencies = {}
     # Your code goes here
-    for i in range(len(items)):
-        if frequencies.keys().count(items(i))==0:
-            frequencies.update({items(i):1})
-        else:
-            frequencies.update({items(i):frequencies.get(items(i))})
+    while(len(items)!=0):
+        frequencies.update(items[0],items.count(items[0]))
+        temp = items.count(items[0])
+        tem = items[0]
+        for i in range(temp):
+            items.remove(tem)
+
     return frequencies
